@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
 function Home() {
@@ -13,10 +14,18 @@ function Home() {
         voluptatem distinctio architecto.
       </p>
       <div>
-        <Link to="/login">Here you can sign in</Link>
+        <Link to="/login">
+          <Button variant="contained" type="button">
+            Here you can sign in
+          </Button>
+        </Link>
       </div>
       <div>
-        <Link to="/chat">Here you can see the chat rooms</Link>
+        <Link to="/chat">
+          <Button variant="contained" type="button">
+            Here you can see the chat rooms
+          </Button>
+        </Link>
       </div>
     </div>
   );
