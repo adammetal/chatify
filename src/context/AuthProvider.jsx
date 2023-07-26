@@ -1,3 +1,4 @@
+/* eslint-disable react-refresh/only-export-components */
 import { useAuthState } from 'react-firebase-hooks/auth';
 import PropTypes from "prop-types";
 import { createContext, useContext } from "react";
