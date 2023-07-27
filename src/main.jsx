@@ -6,11 +6,12 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
 
-import '@fontsource/roboto/300.css';
-import '@fontsource/roboto/400.css';
-import '@fontsource/roboto/500.css';
-import '@fontsource/roboto/700.css';
+import "@fontsource/roboto/300.css";
+import "@fontsource/roboto/400.css";
+import "@fontsource/roboto/500.css";
+import "@fontsource/roboto/700.css";
 import { CssBaseline, GlobalStyles } from "@mui/material";
+import AuthProvider from "./context/AuthProvider";
 
 const router = createBrowserRouter([
   {
@@ -36,12 +37,19 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <CssBaseline />
-    <GlobalStyles styles={{
-      a: {
-        color: 'inherit',
-        textDecoration: 'none'
-      }
-    }} />
-    <RouterProvider router={router} />
+    <GlobalStyles
+      styles={{
+        body: {
+          backgroundColor: '#e1e1e1'
+        },
+        a: {
+          color: "inherit",
+          textDecoration: "none",
+        },
+      }}
+    />
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
   </React.StrictMode>
 );
