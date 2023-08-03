@@ -28,9 +28,9 @@ function Messages({ roomId }) {
   return (
     <Box sx={{ display: "flex", flexDirection: "column", gap: 2 }}>
       {messages?.map((message) => (
-        <Paper key={message.id} elevation={4}>
+        <Paper sx={{p: 2}} key={message.id} elevation={4}>
           {message.file ? (
-            <img style={{ maxWidth: "100%" }} src={message.file} />
+            <img style={{ maxWidth: "300px" }} src={message.file} />
           ) : (
             <Typography variant="p">{message.message}</Typography>
           )}
