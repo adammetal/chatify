@@ -5,6 +5,7 @@ import Layout from "./pages/Layout";
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Chat from "./pages/Chat";
+import Room from './pages/Room';
 
 import "@fontsource/roboto/300.css";
 import "@fontsource/roboto/400.css";
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
         path: "/chat",
         element: <Chat />,
       },
+      {
+        path: '/chat/:id',
+        element: <Room />,
+      }
     ],
   },
 ]);
